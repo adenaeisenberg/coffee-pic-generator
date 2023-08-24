@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
+import { RandomCoffee } from "./RandomCoffee";
 
 export function Content() {
   const [coffee, setCoffee] = useState("");
@@ -18,8 +19,8 @@ export function Content() {
 
   return (
     <div>
-      <h1>Welcome to the Random Coffee Generator 2.0!</h1>
-      <img src={coffee} />
+      <h1>Welcome to the Virtual Coffee Station!</h1>
+      <RandomCoffee picturesofcoffee={coffee} />
       <button onClick={handleClick}> Generate new picture</button>
     </div>
   );
