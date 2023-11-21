@@ -6,7 +6,6 @@ export function Content() {
   const [coffee, setCoffee] = useState("");
 
   const handleClick = () => {
-    console.log("You just clicked the button!");
     axios.get("https://coffee.alexflipnote.dev/random.json").then((response) => {
       console.log(response.data.file);
       setCoffee(response.data.file);
